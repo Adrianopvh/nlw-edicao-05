@@ -2,7 +2,7 @@ import { Entity, PrimaryColumn, Column, CreateDateColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 @Entity()
-class User {
+class Users {
 
     @PrimaryColumn()
     id: string;
@@ -14,10 +14,10 @@ class User {
     created_at: Date;
 
     constructor() {
-        if(!this.id) {
+        if (!this.id) {
             this.id = uuid();
         }
     }
 }
 
-export { User }
+export { Users }
