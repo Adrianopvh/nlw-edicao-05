@@ -26,5 +26,4 @@ class Setting {
         }
     }
 }
-
 export { Setting }
