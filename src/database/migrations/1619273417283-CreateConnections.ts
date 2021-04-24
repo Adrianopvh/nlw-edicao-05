@@ -11,30 +11,30 @@ export class CreateConnections1619273417283 implements MigrationInterface {
                     {
                         name: "id",
                         type: "uuid",
-                        isPrimary: true,
+                        isPrimary: true
                     },
                     {
                         name: "admin_id",
                         type: "uuid",
-                        isNullable: true,
+                        isNullable: true
                     },
                     {
                         name: "user_id",
-                        type: "uuid",
+                        type: "uuid"
                     },
                     {
                         name: "socket_id",
-                        type: "varchar",
+                        type: "varchar"
                     },
                     {
                         name: "created_at",
                         type: "timestamp",
-                        default: "now()",
+                        default: "now()"
                     },
                     {
                         name: "updated_at",
                         type: "timestamp",
-                        default: "now()",
+                        default: "now()"
                     }
                 ]
             })
@@ -55,7 +55,7 @@ export class CreateConnections1619273417283 implements MigrationInterface {
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropForeignKey("connections", "FKConnectionUser");
-        await queryRunner.dropTalbe("connections")
+        await queryRunner.dropTable("connections");
     }
 
 }
