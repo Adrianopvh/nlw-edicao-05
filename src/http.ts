@@ -25,7 +25,6 @@ io.on("connection", (socket: Socket) => {
 });
 
 app.use(express.json());
-
 app.use(routes);
 
 export { http, io };
